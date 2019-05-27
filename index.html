@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/serif.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>CSS Grid Layout</section>
+			<section>The Introduction
+				<p class="fragment fade-in-then-out" style="color: red;">tables</p>
+				<p class="fragment fade-in-then-out" style="color:blue;">floats</p>
+				<p class="fragment fade-in-then-out" style="color:green;">positioning and inline-block</p>
+				<p class="fragment fade-in-then-semi-out" style="color:orange">flexbox</p>
+			</section>
+			<section>
+				<section>The Terminology</section>
+				<section>
+					<p style="font-weight: bold;">Grid Container</p>
+					<pre>
+						<code>
+		<div class="container">
+			<div class="item-1"></div>
+			<div class="item-2"></div>
+			<div class="item-3"></div>
+		</div>
+						</code>
+					</pre>
+				</section>
+				<section>
+					<p style="font-weight: bold;">Grid Item</p>
+					<pre>
+						<code>
+		<div class="container">
+			<div class="item"></div> 
+			<div class="item">
+			   <p class="sub-item"></p>
+			</div>
+			<div class="item"></div>
+		</div>
+ 						</code>
+					</pre>
+				</section>
+				<section>
+					<p class="fragment fade-out" style="font-weight: bold;">Grid Line</p>
+					<img width="506" height="305" class="fragment grow" data-src="assets/Line.jpg" alt="Grid Line">
+				</section>
+				<section>
+					<p class="fragment fade-out" style="font-weight: bold;">Grid Track</p>
+					<img width="506" height="305" class="fragment grow" data-src="assets/Track.jpg" alt="Grid Track">
+				</section>
+				<section>
+					<p class="fragment fade-out" style="font-weight: bold;">Grid Cell</p>
+					<img width="506" height="305" class="fragment grow" data-src="assets/Cell.jpg" alt="Grid Cell">
+				</section>
+				<section>
+					<p class="fragment fade-out" style="font-weight: bold;">Grid Area</p>
+					<img width="506" height="305" class="fragment grow" data-src="assets/Area.jpg" alt="Grid Area">
+				</section>
+			</section>
+			<section>
+				<section>The Example</section>
+				<section>
+					<pre>
+						<code >
+		.container {
+			display: grid;
+			grid-template-rows: repeat (6, 1fr);
+			grid-template-columns: repeat (3, 1fr);
+		}
+						</code>
+					</pre>
+				</section>
+				<section data-transition="slide" data-background="assets/depositphotosl.jpg"
+					data-background-transition="zoom">
+					<img data-src="assets/1.jpg" alt="Grid Lines">
+				</section>
+				<section>
+					<pre>
+						<code >
+	.container {
+		"door empty empty chest chest boarde"
+		"empty carpet carpet carpet carpet window"
+ 		"empty sofa sofa sofa desk desk";
+	}
+						</code>
+					</pre>
+				</section>
+				<section data-transition="slide" data-background="assets/shutterstock_252681295.jpg"
+					data-background-transition="zoom">
+					<img data-src="assets/2.jpg" alt="Room">
+				</section>
+
+				<section data-transition="slide" data-background="assets/8299070.jpg" data-background-transition="zoom">
+					<img data-src="assets/3.jpg" alt="Cool room">
+				</section>
+
+			</section>
+			<section>Break and Repair
+				<p class="fragment fade-in-then-out" style="color: red;"><code>overflow-x </code><span
+						style="color:black;">breaks the Grid &#128542;</span></p>
+				<p class="fragment fade-in-then-out" style="color:blue;"><code>overflow-x: auto </code><span
+						style="color:black;">does not repair &#128557;</span></p>
+				<p class="fragment fade-in-then-out" style="color:green;"><code>overflow: hidden </code><span
+						style="color:black;">does not repair &#128561;</span></p>
+				<p class="fragment fade-in-then-semi-out" style="color:orange">
+					<code>.grid > * { min-width: 0; } </code><span style="color:black;">is good &#128588;</span></p>
+			</section>
+			<section>
+				<section>The Simulators</section>
+				<section data-transition="slide" data-background="assets/1921995371.jpg"
+					data-background-transition="zoom">
+					<p>
+						<a href="https://www.cssgridplayground.com" style="color:blue;" target="_blank">CSS Grid
+							Playground</a>
+					</p>
+					<p>
+						<a href="https://alialaa.github.io/css-grid-cheat-sheet" style="color:blue;" target="_blank">CSS
+							Grid Cheat
+							Sheet</a>
+					</p>
+					<p>
+						<a href="https://codepen.io/DJTB/pen/ZeNRrN" style="color:blue;" target="_blank">CSS Grid
+							Template Builder</a>
+					</p>
+					<p>
+						<a href="https://cssgridgarden.com/" style="color:blue;" target="_blank">Grid Garden</a>
+					</p>
+				</section>
+			</section>
+			<section>
+				<p> This is not the end, just the last slide &#128521; </p>
+				<p class="fragment"> Have a nice day and thank you for your attention &#128587; </p>
+			</section>
+
+
+		</div>
+	</div>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
